@@ -29,17 +29,18 @@ chat_ia_db/
 
 ## 🚀 Requisitos
 
-```plaintext
 - Ubuntu Server o WSL con Ubuntu
 - PostgreSQL 15 o superior
 - Extensión pgvector activa
 
 **Instalar pgvector en PostgreSQL 15:**
 - bash
+```plaintext
 sudo apt install postgresql-15-pgvector
-
+```
 *Activar la extensión:
 - sql
+```plaintext
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
@@ -50,18 +51,21 @@ CREATE EXTENSION IF NOT EXISTS vector;
 ```plaintext
 **1. Clonar el repositorio**
 - bash
+```plaintext
 git clone https://github.com/TU_USUARIO/chat_ia_db.git
 cd chat_ia_db
+```
 **2. Ejecutar el script principal**
 - bash
+```plaintext
 chmod +x init.sh
 ./init.sh
-
+```
 **Este script:**
 - Crea la base de datos chat_ia si no existe
 - Activa la extensión pgvector
 - Ejecuta todos los scripts SQL (estructura, índices y datos de prueba)
-```
+
 
 ---
 
@@ -84,13 +88,14 @@ chmod +x init.sh
 
 ## 🧪 Comandos útiles para desarrolladores
 
-```plaintext
 **Entrar a PostgreSQL como superusuario:**
 - bash
+```plaintext
 sudo -u postgres psql
-
+```
 **Conectarse a la base chat_ia:**
 - sql
+```plaintext
 \c chat_ia
 \dt               -- Ver todas las tablas
 \d nombre_tabla   -- Ver estructura de una tabla
