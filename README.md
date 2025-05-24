@@ -23,6 +23,7 @@ chat_ia_db/
 ├── .env.example                   # Plantilla de conexión (solo para entornos externos)
 ├── .gitignore
 └── README.md
+```
 
 ---
 
@@ -40,6 +41,7 @@ sudo apt install postgresql-15-pgvector
 *Activar la extensión:
 - sql
 CREATE EXTENSION IF NOT EXISTS vector;
+```
 
 ---
 
@@ -59,6 +61,7 @@ chmod +x init.sh
 - Crea la base de datos chat_ia si no existe
 - Activa la extensión pgvector
 - Ejecuta todos los scripts SQL (estructura, índices y datos de prueba)
+```
 
 ---
 
@@ -75,6 +78,7 @@ chmod +x init.sh
 | `humano`       | Agentes humanos registrados en el sistema                      |
 | `documento_kb` | Documentos de conocimiento (manuales, tickets resueltos, etc.) |
 | `embedding`    | Vectores semánticos generados con `pgvector`                   |
+```
 
 ---
 
@@ -91,6 +95,7 @@ sudo -u postgres psql
 \dt               -- Ver todas las tablas
 \d nombre_tabla   -- Ver estructura de una tabla
 SELECT * FROM usuario;  -- Consultar datos
+```
 
 ---
 
@@ -99,3 +104,5 @@ SELECT * FROM usuario;  -- Consultar datos
 ```plaintext
 Este proyecto integra una base vectorial usando pgvector para búsquedas semánticas con RAG (Retrieval-Augmented Generation).
 Los embeddings pueden ser generados localmente con modelos como bge-base-en-v1.5 y consultados por similitud usando operadores como <=>.
+```
+
