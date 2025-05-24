@@ -30,15 +30,15 @@ chat_ia_db/
 ## 🚀 Requisitos
 
 - Ubuntu Server o WSL con Ubuntu
-- PostgreSQL 15 o superior
+- PostgreSQL 16 o superior
 - Extensión pgvector activa
 
-**Instalar pgvector en PostgreSQL 15:**
+**Instalar pgvector en PostgreSQL 16:**
 - bash
 ```plaintext
-sudo apt install postgresql-15-pgvector
+sudo apt install postgresql-16-pgvector
 ```
-*Activar la extensión:
+**Activar la extensión:**
 - sql
 ```plaintext
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -48,7 +48,6 @@ CREATE EXTENSION IF NOT EXISTS vector;
 
 ## ⚙️ Instalación y uso
 
-```plaintext
 **1. Clonar el repositorio**
 - bash
 ```plaintext
