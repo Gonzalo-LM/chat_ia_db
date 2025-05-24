@@ -27,11 +27,13 @@ chat_ia_db/
 ---
 
 ## 🚀 Requisitos
+
+```plaintext
 - Ubuntu Server o WSL con Ubuntu
 - PostgreSQL 15 o superior
 - Extensión pgvector activa
 
-* Instalar pgvector en PostgreSQL 15:
+**Instalar pgvector en PostgreSQL 15:**
 - bash
 sudo apt install postgresql-15-pgvector
 
@@ -42,16 +44,18 @@ CREATE EXTENSION IF NOT EXISTS vector;
 ---
 
 ## ⚙️ Instalación y uso
-1. Clonar el repositorio
+
+```plaintext
+**1. Clonar el repositorio**
 - bash
 git clone https://github.com/TU_USUARIO/chat_ia_db.git
 cd chat_ia_db
-2. Ejecutar el script principal
+**2. Ejecutar el script principal**
 - bash
 chmod +x init.sh
 ./init.sh
 
-* Este script:
+**Este script:**
 - Crea la base de datos chat_ia si no existe
 - Activa la extensión pgvector
 - Ejecuta todos los scripts SQL (estructura, índices y datos de prueba)
@@ -59,6 +63,8 @@ chmod +x init.sh
 ---
 
 ## 🧩 Componentes clave del modelo de datos
+
+```plaintext
 | Tabla          | Propósito                                                      |
 | -------------- | -------------------------------------------------------------- |
 | `usuario`      | Registra a los clientes por número de teléfono                 |
@@ -73,11 +79,13 @@ chmod +x init.sh
 ---
 
 ## 🧪 Comandos útiles para desarrolladores
-* Entrar a PostgreSQL como superusuario:
+
+```plaintext
+**Entrar a PostgreSQL como superusuario:**
 - bash
 sudo -u postgres psql
 
-* Conectarse a la base chat_ia:
+**Conectarse a la base chat_ia:**
 - sql
 \c chat_ia
 \dt               -- Ver todas las tablas
@@ -87,5 +95,7 @@ SELECT * FROM usuario;  -- Consultar datos
 ---
 
 ## 🧠 Extra: vector DB y RAG
+
+```plaintext
 Este proyecto integra una base vectorial usando pgvector para búsquedas semánticas con RAG (Retrieval-Augmented Generation).
 Los embeddings pueden ser generados localmente con modelos como bge-base-en-v1.5 y consultados por similitud usando operadores como <=>.
